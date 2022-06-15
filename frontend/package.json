@@ -1,0 +1,26 @@
+{
+  "name": "@mio-core/mioauth-frontend",
+  "version": "0.0.0",
+  "description": "AUTH services for mio microserver architecture",
+  "main": "./src/server.js",
+  "exports": {
+    "import": "./src/browser.js",
+    "require": "./src/server.js"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/citkane/mioAuth.git"
+  },
+  "author": "Michael Jonker",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/citkane/mioAuth/issues"
+  },
+  "homepage": "https://github.com/citkane/mioAuth#readme",
+  "dependencies": {
+    "@mio-graphics/miolook": "file:../../../graphics/mioLook"
+  }
+}

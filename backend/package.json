@@ -1,0 +1,26 @@
+{
+  "name": "@vio-core/auth-bff",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/electricityexchange/viocore-auth/src/master/backend/"
+  },
+  "description": "Auth and user details provider for vioApp",
+  "main": "./src/module.js",
+  "scripts": {
+    "start": "node ./src/module.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Jonker",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@vio-app/config": "file:../../../vioconfig",
+    "@vio-app/control": "file:../../../viocontrol",
+    "@vio-core/connect": "file:../../../core/viocore-connect",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "fs-extra": "^9.0.0"
+  }
+}
