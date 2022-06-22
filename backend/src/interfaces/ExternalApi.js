@@ -1,4 +1,4 @@
-const ExternalInterface = require('@vio-core/connect/src/vioLang/ExternalInterface');
+const ExternalInterface = require('@mio-core/mioservice/src/etc/ExternalInterface');
 
 module.exports =  class ExternalApi extends ExternalInterface  {
     constructor(api) {

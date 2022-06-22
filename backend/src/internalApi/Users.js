@@ -1,7 +1,7 @@
 let uids = [];
 let usersByUsername = {};
 let usersByEmail = {};
-let api, vio, logger, config, allowedUserDomains;
+let api, mio, logger, config, allowedUserDomains;
 
 function sanitize(string){
     /**
@@ -54,10 +54,10 @@ module.exports = class Users {
         config = _config;
         allowedUserDomains = config.get('authServer.allowedUserDomains')      
     }
-    init(_api, _vio, _logger){
+    init(_api, _mio, _logger){
         logger = _logger;
         api = _api;
-        vio = _vio;
+        mio = _mio;
         this.users = {};
         return Promise.resolve();
     }
@@ -122,7 +122,7 @@ module.exports = class Users {
             .then(() => this.getUserById(uid))
             .then(_user => user = _user)
             .then(() => api.keyManager.newUserToken(user, config.get('tokenExpiry.newpassword')))
-            .then(token => vio.create('mail.users.welcomemessage', [user.credentials, token, origin]))
+            .then(token => mio.create('mail.users.welcomemessage', [user.credentials, token, origin]))
             .then(() => user)
     }
 
@@ -140,7 +140,7 @@ module.exports = class Users {
         return this.getUserByName(username)
             .then(_user => user = _user)
             .then(() => api.keyManager.newUserToken(user, config.get('tokenExpiry.newpassword')))
-            .then(token => vio.create('mail.users.resetpassword', [user.credentials, token, origin]))
+            .then(token => mio.create('mail.users.resetpassword', [user.credentials, token, origin]))
             .then(() => `A password reset link was sent to your registered email. It is valid for ${config.get('tokenExpiry.newpassword')}.`)
     }
 };

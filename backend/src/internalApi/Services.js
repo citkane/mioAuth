@@ -1,11 +1,11 @@
-let api, vio, config;
+let api, mio, config;
 module.exports = class Services {
     constructor(_config) {
         config = _config;
     }
-    init(_api, _vio){
+    init(_api, _mio){
         api = _api;
-        vio = _vio;
+        mio = _mio;
         return Promise.resolve();
     }
     onConnect(){}

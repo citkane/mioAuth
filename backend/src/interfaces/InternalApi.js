@@ -14,11 +14,11 @@ class InternalApi {
         keys = Object.keys(this.api);
     }
     
-    init(vio, keyManager){
+    init(mio, keyManager){
         if(keyManager) this.api.keyManager = keyManager; //keyManager is only used for AUTH modules
         const promises = [];
         keys.forEach(key => {
-            promises.push(this.api[key].init(this.api, vio, logger));
+            promises.push(this.api[key].init(this.api, mio, logger));
         });
         return Promise.all(promises).then(() => logger.logInternalApiReady())
     }

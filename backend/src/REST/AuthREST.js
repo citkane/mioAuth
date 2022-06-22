@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const https = require('https');
 const fs = require('fs-extra');
 
-const KeyManager = require('@vio-app/control');
-const Logger = require('@vio-core/connect/src/Logger');
+const KeyManager = require('@mio-core/miosecurity');
+const Logger = require('@mio-core/miologger');
 
 const Public = require('./Public');
 
@@ -20,7 +20,7 @@ module.exports = class AuthREST extends Public {
         config = appDetails.config.get(this.domain)
         thisConfig = config.get('authServer');
         logger = new Logger({
-            uid: 'viocore-auth-REST',
+            uid: 'mioAuth-REST',
             type: 'special',
             config: appDetails.config
         });
