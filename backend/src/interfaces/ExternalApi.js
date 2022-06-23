@@ -1,4 +1,4 @@
-const ExternalInterface = require('@mio-core/mioservice/src/etc/ExternalInterface');
+const ExternalInterface = require('@mio-lib/mioservice/src/etc/ExternalInterface');
 
 module.exports =  class ExternalApi extends ExternalInterface  {
     constructor(api) {

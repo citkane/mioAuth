@@ -1,7 +1,7 @@
 if(!process.env.NODE_ENV) process.env.NODE_ENV = "development";
-const config = require('@mio-core/mioconfig');
-const Logger = require('@mio-core/miologger')
-const MioService = require('@mio-core/mioservice');
+const config = require('@mio-lib/mioconfig');
+const Logger = require('@mio-lib/miologger')
+const MioService = require('@mio-lib/mioservice');
 const AuthREST = require('./REST/AuthREST');
 
 const InternalApi = require('./interfaces/InternalApi');

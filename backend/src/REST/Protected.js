@@ -1,6 +1,5 @@
 const Certbot = require('./Certbot');
-const express = require('express');
-const basicAuth = require('express-basic-auth');
+const { express, 'express-basic-auth':basicAuth } = require('@mio/mioscaffold');
 
 const Cors = require('./Cors');
 

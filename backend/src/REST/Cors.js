@@ -1,4 +1,4 @@
-const cors = require('cors');
+const { cors } = require('@mio/mioscaffold');
 
 module.exports = class Cors {
     constructor(route, whitelist, use){

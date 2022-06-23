@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/citkane/mioAuth.git"
+    "url": "git+https://github.com/mioScaffold/mioAuth.git"
   },
   "author": "Michael Jonker",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/citkane/mioAuth/issues"
+    "url": "https://github.com/mioScaffold/mioAuth/issues"
   },
-  "homepage": "https://github.com/citkane/mioAuth#readme",
+  "homepage": "https://github.com/mioScaffold/mioAuth#readme",
   "dependencies": {
     "@mio-graphics/miolook": "file:../../../graphics/mioLook",
     "axios": "^0.27.2",

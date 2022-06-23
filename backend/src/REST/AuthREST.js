@@ -1,10 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const https = require('https');
-const fs = require('fs-extra');
+const {
+    express,
+    'body-parser':bodyParser,
+    https,
+    'fs-extra':fs
+} = require('@mio/mioscaffold');
 
-const KeyManager = require('@mio-core/miosecurity');
-const Logger = require('@mio-core/miologger');
+const KeyManager = require('@mio-lib/miosecurity');
+const Logger = require('@mio-lib/miologger');
 
 const Public = require('./Public');
 

@@ -1,6 +1,7 @@
 const Protected = require('./Protected');
-const express = require('express');
-const basicAuth = require('express-basic-auth');
+
+const { express, 'express-basic-auth':basicAuth } = require('@mio/mioscaffold');
+
 const Cors = require('./Cors');
 
 const publicAuth = express.Router();
